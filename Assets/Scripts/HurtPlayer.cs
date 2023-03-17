@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour
 {
-    public int damageToGive = 1;
+    public int damageToGive;
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1,23 +1,24 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] private PlayerController _player;
     [SerializeField] private float _invincibilityLength;
+    [SerializeField] private Text _healthText;
+    [SerializeField] private int _maxHealth;
+    [SerializeField] private int _currentHealth;
+    [SerializeField] private GameObject _playerModel;
+    [SerializeField] private float _flashLength = 0.1f;
     private float _invincibilityCounter;
     private float _flashCounter;
     private bool _isRespawning;
     private Vector3 _respawnPoint;
 
-    public int maxHealth;
-    public int currentHealth;
-    public GameObject _playerModel;
-    public float flashLength = 0.1f;
-
     private void Start()
     {
-        currentHealth = maxHealth;
-
+        _currentHealth = _maxHealth;
+        _healthText.text = "Health: " + _currentHealth;
         _respawnPoint = _player.transform.position;
     }
 
@@ -40,7 +41,7 @@ public class HealthManager : MonoBehaviour
                     _playerModel.SetActive(false);
                 }
 
-                _flashCounter = flashLength;
+                _flashCounter = _flashLength;
             }
 
             if(_invincibilityCounter <= 0)
@@ -54,9 +55,9 @@ public class HealthManager : MonoBehaviour
     {
         if(_invincibilityCounter <= 0)
         {
-            currentHealth -= damage;
+            _currentHealth -= damage;
 
-            if(currentHealth <= 0)
+            if(_currentHealth <= 0)
             {
                 Respawn();
             }
@@ -68,24 +69,28 @@ public class HealthManager : MonoBehaviour
 
                 _playerModel.SetActive(false);
 
-                _flashCounter = flashLength;
+                _flashCounter = _flashLength;
             }
         }
+
+        _currentHealth -= damage;
+        _healthText.text = "Health: " + _currentHealth;
     }
 
     public void Respawn()
     {
         _player.transform.position = _respawnPoint;
-        currentHealth = maxHealth;
+        _currentHealth = _maxHealth;
+        _healthText.text = "Health: " + _currentHealth;
     }
 
     public void HealingPlayer(int healAmount)
     {
-        currentHealth += healAmount;
+        _currentHealth += healAmount;
 
-        if (currentHealth > maxHealth)
+        if (_currentHealth > _maxHealth)
         {
-            currentHealth = maxHealth;
+            _currentHealth = _maxHealth;
         }
     }
 
