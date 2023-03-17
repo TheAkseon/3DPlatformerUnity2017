@@ -56,15 +56,15 @@
      <Compile Include="Assets\Scripts\Coin\CoinCollect.cs" />
      <Compile Include="Assets\Scripts\Coin\DestroyOverTime.cs" />
      <Compile Include="Assets\Scripts\Coin\Rotator.cs" />
-     <Compile Include="Assets\Scripts\HorizontalPlatform.cs" />
-     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\HealthManager.cs" />
      <Compile Include="Assets\Scripts\MaterialMover.cs" />
+     <Compile Include="Assets\Scripts\Platforms\HorizontalPlatform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\RotatePlatform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\VerticalPlatform.cs" />
      <Compile Include="Assets\Scripts\Player\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Player\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\RotatePlatform.cs" />
-     <Compile Include="Assets\Scripts\VerticalPlatform.cs" />
      <Compile Include="Assets\Scripts\WheelController.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>

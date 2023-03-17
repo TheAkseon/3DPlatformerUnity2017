@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1500
     height: 917
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 581, y: 471}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 124
+  controlID: 122
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 471}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 11
+  controlID: 79
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,9 +296,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.702037, y: -4.0478325, z: 36.66738}
+    m_Target: {x: 6.472677, y: -11.3895855, z: 75.45386}
     speed: 2
-    m_Value: {x: 7.702037, y: -4.0478325, z: 36.66738}
+    m_Value: {x: 6.472677, y: -11.3895855, z: 75.45386}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -322,13 +322,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.21362364, y: -0.35325667, z: 0.083202034, w: -0.90700173}
+    m_Target: {x: -0.20936373, y: -0.08874853, z: 0.019084712, w: -0.97361517}
     speed: 2
-    m_Value: {x: -0.21362364, y: -0.35325667, z: 0.083202034, w: -0.90700173}
+    m_Value: {x: -0.2093637, y: -0.08874852, z: 0.01908471, w: -0.97361505}
   m_Size:
-    m_Target: 74.43853
+    m_Target: 105.45715
     speed: 2
-    m_Value: 74.43853
+    m_Value: 105.45715
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -584,23 +584,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 9e080000
     m_LastClickedID: 0
-    m_ExpandedIDs: a2fbffff000000004c3700007a370000e2370000
+    m_ExpandedIDs: a2fbffff000000004a3700007a370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameManager
+      m_OriginalName: GameManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14332
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -660,7 +660,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 36280000
     m_LastClickedID: 10294
-    m_ExpandedIDs: 00000000362800005e2800005a290000d62b0000a62c00002c2f0000e63000001c3200002032000076320000523500007e39000080390000823900008439000086390000883900008a3900008c3900008e39000090390000923900009439000096390000983900009a3900009c3900009e390000a0390000a239000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000362800005e2800005a290000d62b0000a62c00002c2f0000e63000001c320000203200007632000052350000783900007a3900007c3900007e39000080390000823900008439000086390000883900008a3900008c3900008e39000090390000923900009439000096390000983900009a3900009c39000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -688,7 +688,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000362800005e2800005a290000d62b0000a62c00002c2f0000e63000001c3200002032000076320000523500007e39000080390000823900008439000086390000883900008a3900008c3900008e39000090390000923900009439000096390000983900009a3900009c3900009e390000a0390000a2390000
+    m_ExpandedIDs: 00000000362800005e2800005a290000d62b0000a62c00002c2f0000e63000001c320000203200007632000052350000783900007a3900007c3900007e39000080390000823900008439000086390000883900008a3900008c3900008e39000090390000923900009439000096390000983900009a3900009c390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
