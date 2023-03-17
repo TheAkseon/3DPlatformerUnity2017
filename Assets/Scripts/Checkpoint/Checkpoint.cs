@@ -1,19 +1,21 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Checkpoint : MonoBehaviour 
 {
-	private LevelCheckpoints _levelCheckpoints;
+    private HealthManager _healthManager;
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.tag == "Player")
-		{
-			_levelCheckpoints.PlayerThroughCheckpoint(this);
-		}
-	}
+    private void Start()
+    {
+        _healthManager = FindObjectOfType<HealthManager>();
+    }
 
-	public void SetLevelCheckpoints(LevelCheckpoints levelCheckpoints)
-	{
-		_levelCheckpoints = levelCheckpoints;
-	}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            _healthManager.SetSpawnPoint(transform.position);
+        }
+    }
 }

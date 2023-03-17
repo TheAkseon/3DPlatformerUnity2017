@@ -88,4 +88,9 @@ public class HealthManager : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
+
+    public void SetSpawnPoint(Vector3 newPosition)
+    {
+        _respawnPoint = newPosition;
+    }
 }
