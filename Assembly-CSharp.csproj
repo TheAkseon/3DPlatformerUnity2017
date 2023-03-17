@@ -51,18 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint\LevelCheckpoints.cs" />
      <Compile Include="Assets\Scripts\ChestDemo.cs" />
-     <Compile Include="Assets\Scripts\CoinCollect.cs" />
-     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\HealthManager.cs" />
+     <Compile Include="Assets\Scripts\Coin\CoinCollect.cs" />
+     <Compile Include="Assets\Scripts\Coin\DestroyOverTime.cs" />
+     <Compile Include="Assets\Scripts\Coin\Rotator.cs" />
      <Compile Include="Assets\Scripts\HorizontalPlatform.cs" />
      <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\HealthManager.cs" />
      <Compile Include="Assets\Scripts\MaterialMover.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\RotatePlatform.cs" />
-     <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\VerticalPlatform.cs" />
      <Compile Include="Assets\Scripts\WheelController.cs" />
  <Reference Include="UnityEngine.CoreModule">
