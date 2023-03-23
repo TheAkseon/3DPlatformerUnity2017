@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\HealthManager.cs" />
      <Compile Include="Assets\Scripts\MaterialMover.cs" />
+     <Compile Include="Assets\Scripts\Platforms\DisappearingPlatform.cs" />
      <Compile Include="Assets\Scripts\Platforms\HorizontalPlatform.cs" />
      <Compile Include="Assets\Scripts\Platforms\RotatePlatform.cs" />
      <Compile Include="Assets\Scripts\Platforms\VerticalPlatform.cs" />
