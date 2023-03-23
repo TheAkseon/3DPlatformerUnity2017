@@ -9,42 +9,35 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _pivot;
     [SerializeField] private GameObject _playerModel;
-    [SerializeField] private float _knockBackForce;
-    [SerializeField] private float _knockBackTime;
 
-    private float knockBackCounter;
     private CharacterController _characterController;
     private Vector3 _moveDirection;
+    private GameManager _gameManager;
 
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
     private void Update()
     {
-        if(knockBackCounter <= 0)
-        {
-            //_moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, _moveDirection.y, Input.GetAxis("Vertical") * _moveSpeed);
-            float yStore = _moveDirection.y;
-            _moveDirection = (transform.forward * Input.GetAxis("Vertical") * _moveSpeed) + (transform.right * Input.GetAxis("Horizontal"));
-            _moveDirection = _moveDirection.normalized * _moveSpeed;
-            _moveDirection.y = yStore;
+         //_moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, _moveDirection.y, Input.GetAxis("Vertical") * _moveSpeed);
+         float yStore = _moveDirection.y;
+         _moveDirection = (transform.forward * Input.GetAxis("Vertical") * _moveSpeed) + (transform.right * Input.GetAxis("Horizontal"));
+         _moveDirection = _moveDirection.normalized * _moveSpeed;
+         _moveDirection.y = yStore;
 
-            if (_characterController.isGrounded)
+         if (_characterController.isGrounded)
+         {
+            _moveDirection.y = 0f;
+
+            if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
             {
-                _moveDirection.y = 0f;
-
-                if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
-                {
-                    _moveDirection.y = _jumpForce;
-                }
+                _gameManager.PlayJumpSound();
+                _moveDirection.y = _jumpForce;
             }
-        }
-        else
-        {
-            knockBackCounter -= Time.deltaTime;
-        }
+         }
 
         _moveDirection.y = _moveDirection.y + (Physics.gravity.y * _gravityScale * Time.deltaTime);
         _characterController.Move(_moveDirection * Time.deltaTime);
@@ -59,13 +52,5 @@ public class PlayerController : MonoBehaviour
 
         _animator.SetBool("isGrounded", _characterController.isGrounded);
         _animator.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
-    }
-
-    public void KnockBack(Vector3 direction)
-    {
-        knockBackCounter = _knockBackTime;
-
-        _moveDirection = direction * _knockBackForce;
-        _moveDirection.y = _knockBackForce;
     }
 }
