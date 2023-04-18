@@ -1914,15 +1914,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1947,6 +1947,14 @@ Prefab:
     - target: {fileID: 1893769056011736, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
       propertyPath: m_Name
       value: PlayerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eea16ef0f58854448aaa9db9257bc84b, type: 2}
@@ -2378,8 +2386,6 @@ MonoBehaviour:
   _pivot: {fileID: 327453253}
   _rotateSpeed: 3
   _offset: {x: 0, y: 0, z: 0}
-  _maxViewAngle: 65
-  _minViewAngle: -60
 --- !u!1001 &711779363
 Prefab:
   m_ObjectHideFlags: 0
@@ -3007,7 +3013,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 65971565973111480, guid: f430393a240a4a742953e8dbd06c6747,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65971565973111480, guid: f430393a240a4a742953e8dbd06c6747, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f430393a240a4a742953e8dbd06c6747, type: 2}
   m_IsPrefabParent: 0
 --- !u!23 &784731451 stripped
